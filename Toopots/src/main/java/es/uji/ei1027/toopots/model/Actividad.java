@@ -17,12 +17,6 @@ public class Actividad {
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private LocalDate fecha;
 	private int precio;
-	public int getPrecio() {
-		return precio;
-	}
-	public void setPrecio(int precio) {
-		this.precio = precio;
-	}
 	private int asistentesMinimos;
 	private int asistentesMaximos;
 	private String lugar;
@@ -71,6 +65,12 @@ public class Actividad {
 	}
 	public void setFecha(LocalDate fecha) {
 		this.fecha = fecha;
+	}
+	public int getPrecio() {
+		return precio;
+	}
+	public void setPrecio(int precio) {
+		this.precio = precio;
 	}
 	public int getAsistentesMinimos() {
 		return asistentesMinimos;

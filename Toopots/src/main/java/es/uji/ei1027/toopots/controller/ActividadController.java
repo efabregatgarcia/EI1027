@@ -73,7 +73,7 @@ public class ActividadController {
 	                           BindingResult bindingResult) {
 	        if (bindingResult.hasErrors()) 
 	            return "actividad/update";
-	        actividadDao.getActividad(actividad);
+	        actividadDao.updateActividad(actividad);
 	        return "redirect:../list"; 
 	   }
 	   
