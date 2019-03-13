@@ -51,6 +51,15 @@ public class ActividadDao {
 	/*
 	 * Obtiene la actividad a partir de su IdActividad. Devuelve nulo si no existe.
 	 */
+	public Actividad getActividad(Actividad idActividad) {
+		try {
+			return jdbcTemplate.queryForObject("SELECT * from actividad WHERE idActividad=?", new ActividadRowMapper(),
+					idActividad.getIdActividad());
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
+	}
+	
 	public Actividad getActividad(String idActividad) {
 		try {
 			return jdbcTemplate.queryForObject("SELECT * from actividad WHERE idActividad=?", new ActividadRowMapper(),
