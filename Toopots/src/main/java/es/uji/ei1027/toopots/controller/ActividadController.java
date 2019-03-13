@@ -79,8 +79,8 @@ public class ActividadController {
 	   
 	   //Borrar una actividad
 	   @RequestMapping(value="/delete/{idActividad}")
-	   public String processDelete(@PathVariable String actividad) {
-	          actividadDao.deleteActividad(actividad);
+	   public String processDelete(@PathVariable String idActividad) {
+	          actividadDao.deleteActividad(idActividad);;
 	          return "redirect:../list"; 
 	   }
 
