@@ -45,26 +45,26 @@ public class ClienteController {
 	   
 	   //Modificar
 	   //Modificació d'objectes
-	   @RequestMapping(value="/update/{idActividad}", method = RequestMethod.GET) 
-	   public String editActividad(Model model, @PathVariable String idActividad) { 
-	       model.addAttribute("actividad", actividadDao.getActividad(idActividad));
-	       return "actividad/update"; 
+	   @RequestMapping(value="/update/{idCliente}", method = RequestMethod.GET) 
+	   public String editActividad(Model model, @PathVariable String idCliente) { 
+	       model.addAttribute("actividad", clienteDao.getCliente(idCliente));
+	       return "cliente/update"; 
 	   }
 	   //Resposta de modificació d'objectes
-	   @RequestMapping(value="/update/{idActividad}", method = RequestMethod.POST) 
-	   public String processUpdateSubmit(@PathVariable String idActividad, 
-	                           @ModelAttribute("actividad") Actividad actividad, 
+	   @RequestMapping(value="/update/{idCliente}", method = RequestMethod.POST) 
+	   public String processUpdateSubmit(@PathVariable String idCliente, 
+	                           @ModelAttribute("cliente") Cliente cliente, 
 	                           BindingResult bindingResult) {
 	        if (bindingResult.hasErrors()) 
 	            return "actividad/update";
-	        actividadDao.updateActividad(actividad);
+	        clienteDao.updateCliente(cliente);
 	        return "redirect:../list"; 
 	   }
 	   
 	   //Borrar una actividad
-	   @RequestMapping(value="/delete/{idActividad}")
-	   public String processDelete(@PathVariable String idActividad) {
-	          actividadDao.deleteActividad(idActividad);;
+	   @RequestMapping(value="/delete/{idCliente}")
+	   public String processDelete(@PathVariable String idCliente) {
+	          clienteDao.deleteCliente(idCliente);;
 	          return "redirect:../list"; 
 	   }
 
