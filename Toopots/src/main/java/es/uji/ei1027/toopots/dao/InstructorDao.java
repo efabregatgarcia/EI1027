@@ -40,9 +40,9 @@ public class InstructorDao {
 	 * que es clave primarias)
 	 */
 	public void updateInstructor(Instructor instructor) {
-		jdbcTemplate.update("UPDATE instructor SET  estado=?, nombre=?, domicilio=?, email=?, iban=?",
+		jdbcTemplate.update("UPDATE instructor SET  estado=?, nombre=?, domicilio=?, email=?, iban=? WHERE idInstructor=?",
 				instructor.getEstado(), instructor.getNombre(), instructor.getDomicilio(), instructor.getEmail(),
-				instructor.getIban());
+				instructor.getIban(), instructor.getIdInstructor());
 	}
 
 	/* Obtiene el instructor a partir de su idInstructor. Devuelve nulo si no existe. */
