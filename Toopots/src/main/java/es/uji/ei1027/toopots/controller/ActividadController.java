@@ -17,21 +17,12 @@ import es.uji.ei1027.toopots.model.Actividad;
 @RequestMapping("/actividad")
 public class ActividadController {
 
-	@RequestMapping("/prova")
-	public String provaWeb(Model model) {
-		String message = "Provant la Web de Toopots";
-		model.addAttribute("message", message);
-		return "prova";
-	}
+	
+	
 	@Autowired
 	ActividadDao actividadDao;
 
-	@RequestMapping("/provaActividad")
-	public String provaUnaActividad(Model model) {
-		Actividad actividad = actividadDao.getActividad("a01");
-		model.addAttribute("message", actividad.toString());
-		return "prova";
-	}
+	
 
 	@RequestMapping("/list")
 	public String listActividades(Model model) {

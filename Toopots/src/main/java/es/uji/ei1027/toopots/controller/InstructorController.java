@@ -49,13 +49,13 @@ public class InstructorController {
 	   
 	   //Modificar
 	   //Modificació d'objectes
-	   @RequestMapping(value="/update/{nom}", method = RequestMethod.GET) 
+	   @RequestMapping(value="/update/{idInstructor}", method = RequestMethod.GET) 
 	   public String editInstructor(Model model, @PathVariable String idInstructor) { 
 	       model.addAttribute("instructor", instructorDao.getInstructor(idInstructor));
 	       return "instructor/update"; 
 	   }
 	   //Resposta de modificació d'objectes
-	   @RequestMapping(value="/update/{nom}", method = RequestMethod.POST) 
+	   @RequestMapping(value="/update/{idInstructor}", method = RequestMethod.POST) 
 	   public String processUpdateSubmit(@PathVariable String idInstructor, 
 	                           @ModelAttribute("instructor") Instructor instructor, 
 	                           BindingResult bindingResult) {
@@ -66,9 +66,9 @@ public class InstructorController {
 	   }
 	   
 	   //Borrar un instructor
-	   @RequestMapping(value="/delete/{nom}")
-	   public String processDelete(@PathVariable String instructor) {
-	          instructorDao.deleteInstructor(instructor);
+	   @RequestMapping(value="/delete/{idInstructor}")
+	   public String processDelete(@PathVariable String idInstructor) {
+	          instructorDao.deleteInstructor(idInstructor);
 	          return "redirect:../list"; 
 	   }
 
