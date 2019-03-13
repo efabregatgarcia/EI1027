@@ -24,7 +24,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="instructor ${instructor}">
+				<tr th:each="instructor: ${instructores}">
 					<td th:text="${instructor.idInstructor}"></td>
 					<td th:text="${instructor.estado}"></td>
 					<td th:text="${instructor.nombre}"></td>		
