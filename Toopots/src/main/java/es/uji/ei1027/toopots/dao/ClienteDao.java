@@ -1,13 +1,20 @@
 package es.uji.ei1027.toopots.dao;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import es.uji.ei1027.toopots.model.Actividad;
 import es.uji.ei1027.toopots.model.Cliente;
 
+
+@Repository
 public class ClienteDao {
 	
 	private JdbcTemplate jdbcTemplate;
@@ -18,7 +25,7 @@ public class ClienteDao {
 		
 	}
 	
-	public void addActividad(Cliente cliente) {
+	public void addCliente(Cliente cliente) {
 		jdbcTemplate.update("INSERT INTO cliente VALUES(?,?,?,?,?)",
 				cliente.getIdCliente(), cliente.getNombre(), cliente.getEmail(), cliente.getSexo(), cliente.getFechaNacimiento());
 	}
@@ -30,6 +37,33 @@ public class ClienteDao {
 	public void updateCliente(Cliente cliente) {
 		jdbcTemplate.update("UPDATE cliente SET nombre=?, email=?, sexo=?",
 				cliente.getNombre(), cliente.getEmail(), cliente.getSexo());
+	}
+	/*
+	 * Obtiene la actividad a partir de su IdActividad. Devuelve nulo si no existe.
+	 */
+	public Cliente getCliente(Cliente idCliente) {
+		try {
+			return jdbcTemplate.queryForObject("SELECT * from cliente WHERE idCliente=?", new ClienteRowMapper(),
+					idCliente.getIdCliente());
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
+	}
+	
+	public Cliente getCliente(String idCliente) {
+		try {
+			return jdbcTemplate.queryForObject("SELECT * from cliente WHERE idCliente=?", new ClienteRowMapper(),
+					idCliente);
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
+	}
+	public List<Cliente> getClientes() {
+		try {
+			return jdbcTemplate.query("SELECT * from cliente", new ClienteRowMapper());
+		} catch (EmptyResultDataAccessException e) {
+			return new ArrayList<Cliente>();
+		}
 	}
 
 }
