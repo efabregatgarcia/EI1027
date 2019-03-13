@@ -31,8 +31,6 @@ public class ActividadDao {
 				actividad.getPuntoLlegada(), actividad.getHoraLlegada());
 	}
 
-	
-
 	public void deleteActividad(String actividad) {
 		jdbcTemplate.update("DELETE from actividad where idActividad=?", actividad);
 	}
@@ -42,18 +40,21 @@ public class ActividadDao {
 	 * que son claves primarias)
 	 */
 	public void updateActividad(Actividad actividad) {
-		jdbcTemplate.update("UPDATE actividad SET  estado=?, nombre=?, descripcion=?, duracion=?, fecha=?, "
+		jdbcTemplate.update("UPDATE actividad SET   estado=?, nombre=?, duracion=?, descripcion=?, fecha=?, "
 				+ "precio=?, asistentesMinimos=?, asistentesMaximos=?, lugar=?, puntoLlegada=?, horaLlegada=? where nom=?",
-				actividad.getEstado(), actividad.getNombre(), actividad.getDescripcion(), actividad.getDuracion(),
+				actividad.getEstado(), actividad.getNombre(), actividad.getDuracion(), actividad.getDescripcion(),
 				actividad.getFecha(), actividad.getPrecio(), actividad.getAsistentesMinimos(),
 				actividad.getAsistentesMaximos(), actividad.getLugar(), actividad.getPuntoLlegada(),
 				actividad.getHoraLlegada());
 	}
 
-	/* Obtiene la actividad a partir de su IdActividad. Devuelve nulo si no existe. */
+	/*
+	 * Obtiene la actividad a partir de su IdActividad. Devuelve nulo si no existe.
+	 */
 	public Actividad getActividad(String idActividad) {
 		try {
-			return jdbcTemplate.queryForObject("SELECT * from actividad WHERE idActividad=?", new ActividadRowMapper(), idActividad);
+			return jdbcTemplate.queryForObject("SELECT * from actividad WHERE idActividad=?", new ActividadRowMapper(),
+					idActividad);
 		} catch (EmptyResultDataAccessException e) {
 			return null;
 		}

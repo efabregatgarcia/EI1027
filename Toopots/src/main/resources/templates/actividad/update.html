@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+<head>
+   <title>Modificar la actividad</title>
+   <meta charset="UTF-8" />
+   <link rel="stylesheet"       
+     href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+</head>
+<body>
+    <h2>Modificar actividad</h2>
+    <form action="#" th:action="@{/actividad/update/{idActividad}(idActividad=${actividad.idActividad})}" 
+                     th:object="${actividad}" method="post"> 
+      <table>
+        <tr>
+            <td><label>Identificador de la actividad: </label></td>
+            <td><input type="text" th:field="*{idActividad}" /></td> 
+        </tr>
+        <tr>
+            <td><label>Identificador del instructor: </label></td>
+            <td><input type="text" th:field="*{idInstructor}" /></td>
+        </tr>
+        <tr>
+            <td><label>Estado: </label></td>
+            <td><input type="text" th:field="*{estado}" /></td>
+        </tr>
+        <tr>
+            <td><label>Nombre de la actividad: </label></td>
+            <td><input type="text" th:field="*{nombre}" /></td>
+        </tr>
+         <tr>
+            <td><label>Duración de la actividad: </label></td>
+            <td><input type="number" th:field="*{duracion}" /></td>
+        </tr>
+        <tr>
+            <td><label>Descripción: </label></td>
+            <td><input type="text" th:field="*{descripcion}" /></td>
+        </tr>
+         <tr>
+            <td><label>Fecha de la actividad: </label></td>
+            <td><input type="text" th:field="*{fecha}" /></td>
+        </tr>
+         <tr>
+            <td><label>Precio por persona: </label></td>
+            <td><input type="number" th:field="*{precio}" /></td>
+        </tr>
+         <tr>
+            <td><label>Asistentes Mínimos: </label></td>
+            <td><input type="number" th:field="*{asistentesMinimos}" /></td>
+        </tr>
+         <tr>
+            <td><label>Asistentes Máximos: </label></td>
+            <td><input type="number" th:field="*{asistentesMaximos}" /></td>
+        </tr>
+         <tr>
+            <td><label>Lugar de la actividad: </label></td>
+            <td><input type="text" th:field="*{lugar}" /></td>
+        </tr>
+         <tr>
+            <td><label>Destino final de la actividad: </label></td>
+            <td><input type="text" th:field="*{puntoLlegada}" /></td>
+        </tr>
+         <tr>
+            <td><label>Hora de la llegada al destino: </label></td>
+            <td><input type="text" th:field="*{horaLlegada}" /></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="Modificar Actividad" /></td>
+        </tr>
+      </table>
+    </form>
+</body>
+</html>

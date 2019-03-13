@@ -61,13 +61,13 @@ public class ActividadController {
 	   
 	   //Modificar
 	   //Modificació d'objectes
-	   @RequestMapping(value="/update/{nom}", method = RequestMethod.GET) 
+	   @RequestMapping(value="/update/{idActividad}", method = RequestMethod.GET) 
 	   public String editActividad(Model model, @PathVariable String idActividad) { 
 	       model.addAttribute("actividad", actividadDao.getActividad(idActividad));
 	       return "actividad/update"; 
 	   }
 	   //Resposta de modificació d'objectes
-	   @RequestMapping(value="/update/{nom}", method = RequestMethod.POST) 
+	   @RequestMapping(value="/update/{idActividad}", method = RequestMethod.POST) 
 	   public String processUpdateSubmit(@PathVariable String idActividad, 
 	                           @ModelAttribute("actividad") Actividad actividad, 
 	                           BindingResult bindingResult) {
@@ -78,7 +78,7 @@ public class ActividadController {
 	   }
 	   
 	   //Borrar una actividad
-	   @RequestMapping(value="/delete/{nom}")
+	   @RequestMapping(value="/delete/{idActividad}")
 	   public String processDelete(@PathVariable String actividad) {
 	          actividadDao.deleteActividad(actividad);
 	          return "redirect:../list"; 
