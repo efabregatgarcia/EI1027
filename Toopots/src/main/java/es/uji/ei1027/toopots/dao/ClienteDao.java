@@ -10,7 +10,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import es.uji.ei1027.toopots.model.Actividad;
+
 import es.uji.ei1027.toopots.model.Cliente;
 
 
@@ -39,7 +39,7 @@ public class ClienteDao {
 				cliente.getNombre(), cliente.getEmail(), cliente.getSexo());
 	}
 	/*
-	 * Obtiene la actividad a partir de su IdActividad. Devuelve nulo si no existe.
+	 * Obtiene el cliente a partir de su IdCliente. Devuelve nulo si no existe.
 	 */
 	public Cliente getCliente(Cliente idCliente) {
 		try {

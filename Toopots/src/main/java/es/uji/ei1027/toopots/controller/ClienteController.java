@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import es.uji.ei1027.toopots.dao.ClienteDao;
-import es.uji.ei1027.toopots.model.Actividad;
+
 import es.uji.ei1027.toopots.model.Cliente;
 
 @Controller
@@ -29,7 +29,7 @@ public class ClienteController {
 	 
 	 @RequestMapping("/list")
 		public String listClientes(Model model) {
-			model.addAttribute("actividades", clienteDao.getClientes());
+			model.addAttribute("clientes", clienteDao.getClientes());
 			return "cliente/list";
 		}
 	 
@@ -38,7 +38,7 @@ public class ClienteController {
 	   public String processAddSubmit(@ModelAttribute("cliente") Cliente cliente,
 	                                   BindingResult bindingResult) {  
 	        if (bindingResult.hasErrors()) 
-	               return "actividad/add";
+	               return "cliente/add";
 	        clienteDao.addCliente(cliente);
 	        return "redirect:list"; 
 	    }
@@ -46,8 +46,8 @@ public class ClienteController {
 	   //Modificar
 	   //Modificació d'objectes
 	   @RequestMapping(value="/update/{idCliente}", method = RequestMethod.GET) 
-	   public String editActividad(Model model, @PathVariable String idCliente) { 
-	       model.addAttribute("actividad", clienteDao.getCliente(idCliente));
+	   public String updateCliente(Model model, @PathVariable String idCliente) { 
+	       model.addAttribute("cliente", clienteDao.getCliente(idCliente));
 	       return "cliente/update"; 
 	   }
 	   //Resposta de modificació d'objectes
@@ -56,12 +56,12 @@ public class ClienteController {
 	                           @ModelAttribute("cliente") Cliente cliente, 
 	                           BindingResult bindingResult) {
 	        if (bindingResult.hasErrors()) 
-	            return "actividad/update";
+	            return "cliente/update";
 	        clienteDao.updateCliente(cliente);
 	        return "redirect:../list"; 
 	   }
 	   
-	   //Borrar una actividad
+	   //Borrar una cliente
 	   @RequestMapping(value="/delete/{idCliente}")
 	   public String processDelete(@PathVariable String idCliente) {
 	          clienteDao.deleteCliente(idCliente);;
