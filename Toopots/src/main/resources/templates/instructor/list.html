@@ -33,10 +33,10 @@
 					<td th:text="${instructor.iban}"></td>
 
 					<td><a
-						th:href="@{/instructor/update/{idInstructor}(id_Instructor=${instructor.idInstructor})}"
+						th:href="@{/instructor/update/{idInstructor}(idInstructor=${instructor.idInstructor})}"
 						class="btn btn-warning" role="button">Editar</a></td>
 					<td><a
-						th:href="@{/instructor/delete/{idInstructor}(id_Instructor=${instructor.idActividad})}"
+						th:href="@{/instructor/delete/{idInstructor}(idInstructor=${instructor.idInstructor})}"
 						class="btn btn-danger" role="button">Borrar</a></td>
 				</tr>
 			</tbody>

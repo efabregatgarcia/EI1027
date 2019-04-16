@@ -8,18 +8,18 @@ import org.springframework.jdbc.core.RowMapper;
 
 import es.uji.ei1027.toopots.model.Cliente;
 
-public class ClienteRowMapper implements RowMapper<Cliente>{
+public class ClienteRowMapper implements RowMapper<Cliente> {
 
 	@Override
 	public Cliente mapRow(ResultSet rs, int rowNum) throws SQLException {
 		// TODO Auto-generated method stub
 		Cliente cliente = new Cliente();
-		cliente.setIdCliente(rs.getString("id"));
+		cliente.setIdCliente(rs.getString("idCliente"));
 		cliente.setNombre(rs.getString("nombre"));
 		cliente.setEmail(rs.getString("email"));
 		cliente.setSexo(rs.getString("sexo"));
-		cliente.setFechaNacimiento(rs.getObject("fecha de nacimiento",LocalDate.class));
-		
+		cliente.setFechaNacimiento(rs.getObject("fechaNacimiento", LocalDate.class));
+
 		return cliente;
 	}
 

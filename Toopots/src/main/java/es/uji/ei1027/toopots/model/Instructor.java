@@ -33,6 +33,8 @@ public class Instructor {
 		this.nombre = nombre;
 	}
 
+	
+
 	public String getDomicilio() {
 		return domicilio;
 	}

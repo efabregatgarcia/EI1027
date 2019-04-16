@@ -14,7 +14,7 @@ import es.uji.ei1027.toopots.model.Instructor;
 
 @Repository
 public class InstructorDao {
-	//hola
+	
 	private JdbcTemplate jdbcTemplate;
 
 	@Autowired
