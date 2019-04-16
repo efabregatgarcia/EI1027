@@ -18,6 +18,7 @@ public class ActividadRowMapper implements RowMapper<Actividad> {
 		actividad.setIdInstructor(rs.getString("idInstructor"));
 		actividad.setDescripcion(rs.getString("descripcion"));
 		actividad.setDuracion(rs.getInt("duracion"));
+		actividad.setPrecio(rs.getInt("precio"));
 		actividad.setFecha(rs.getObject("fecha", LocalDate.class));
 		actividad.setAsistentesMinimos(rs.getInt("asistentesMinimos"));
 		actividad.setAsistentesMaximos(rs.getInt("asistentesMaximos"));
