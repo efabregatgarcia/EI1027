@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Crear un nuevo instructor</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+</head>
+<body>
+	<h2>Añadir un instructor</h2>
+	<form action="#" th:action="@{/instructor/add}"
+						th:object="${instructor}" method="post">
+		<table>
+			<tr>
+				<td><label>Identificador de la reserva: </label></td>
+				<td><input type="text" th:field="*{idReserva}" /></td>
+			</tr>
+			<tr>
+				<td><label>Identificador de la actividad: </label></td>
+				<td><input type="text" th:field="*{idActividad}" /></td>
+			</tr>
+			<tr>
+				<td><label>Identificador del cliente:: </label></td>
+				<td><input type="text" th:field="*{idCliente}" /></td>
+			</tr>
+			<tr>
+				<td><label>Estado del pagamiento: </label></td>
+				<td><input type="text" th:field="*{estadoPagamiento}" /></td>
+			</tr>
+			<tr>
+				<td><label>Numero de transaccion: </label></td>
+				<td><input type="text" th:field="*{numeroTransacion}" /></td>
+			</tr>
+			<tr>
+				<td><label>Fecha: </label></td>
+				<td><input type="text" th:field="*{fecha}" /></td>
+			<tr>
+			<tr>
+				<td><label>Numero de asistentes: </label></td>
+				<td><input type="number" th:field="*{numeroAsistentes}" /></td>
+			<tr>
+			<tr>
+				<td><label>Precio por persona: </label></td>
+				<td><input type="number" th:field="*{precioPersona}" /></td>
+			<tr>
+				<td colspan="2"><input type="submit" value="Añadir reserva" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
