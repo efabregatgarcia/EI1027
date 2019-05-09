@@ -5,7 +5,7 @@ import es.uji.ei1027.toopots.enumeracion.EnumTipoUsuario;
 public class Usuario {
 	String idUsuario;
 	String password; 
-	EnumTipoUusario enumTipo;
+	EnumTipoUsuario enumTipo;
 	
 	public String getIdUsuario() {
 		return idUsuario; 

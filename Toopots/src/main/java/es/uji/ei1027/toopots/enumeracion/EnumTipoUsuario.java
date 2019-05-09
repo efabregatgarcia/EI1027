@@ -1,4 +1,4 @@
-package es.uji.ei1027.enumeracion;
+package es.uji.ei1027.toopots.enumeracion;
 
 public class EnumTipoUsuario {
 
@@ -29,4 +29,5 @@ public class EnumTipoUsuario {
 		}
 
 	}
+
 }
