@@ -6,11 +6,18 @@ public class RegistroInstructor {
 	private String idInstructor;
 	private String nombre;
 	private String direccion;
+	private String dni;
 	private String telefono;
 	private String curriculum;
 	private String aptitudes;
 	
-
+	
+	public String getDni() {
+		return dni;
+	}
+	public void setDni(String dni) {
+		this.dni = dni;
+	}
 	public String getIdRegistro() {
 		return idRegistro;
 	}
@@ -53,11 +60,12 @@ public class RegistroInstructor {
 	public void setAptitudes(String aptitudes) {
 		this.aptitudes = aptitudes;
 	}
-	
 	@Override
 	public String toString() {
 		return "RegistroInstructor [idRegistro=" + idRegistro + ", idInstructor=" + idInstructor + ", nombre=" + nombre
-				+ ", direccion=" + direccion + ", telefono=" + telefono + ", curriculum=" + curriculum + ", aptitudes="
-				+ aptitudes + "]";
+				+ ", direccion=" + direccion + ", dni=" + dni + ", telefono=" + telefono + ", curriculum=" + curriculum
+				+ ", aptitudes=" + aptitudes + "]";
 	}
+	
+	
 }

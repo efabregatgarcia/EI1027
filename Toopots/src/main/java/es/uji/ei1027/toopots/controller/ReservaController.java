@@ -13,7 +13,7 @@ import es.uji.ei1027.toopots.dao.ReservaDao;
 import es.uji.ei1027.toopots.model.Reserva;
 
 @Controller
-@RequestMapping("/actividad")
+@RequestMapping("/reserva")
 public class ReservaController {
 
 	@Autowired

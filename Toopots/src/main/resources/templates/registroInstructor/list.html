@@ -17,9 +17,9 @@
 					<th>Identificador de instructor:</th>
 					<th>Nombre:</th>
 					<th>Direccion:</th>
+					<th>Dni:</th>
 					<th>Telefono:</th>
-					<th>Curriculum:</th>
-					<th>Aptitudes:</th>					
+					<th>Curriculum:</th>				
 					<th></th>
 					<th></th>
 				</tr>
@@ -30,9 +30,10 @@
 					<td th:text="${registroInstructor.idInstructor}"></td>
 					<td th:text="${registroInstructor.nombre}"></td>		
 					<td th:text="${registroInstructor.direccion}"></td>
+					<td th:text="${registroInstructor.dni}"></td>
 					<td th:text="${registroInstructor.telefono}"></td>
 					<td th:text="${registroInstructor.curriculum}"></td>
-					<td th:text="${registroInstructor.aptitudes}"></td>
+					
 
 					<td><a
 						th:href="@{/registroInstructor/update/{idRegistro}(idRegistro=${registroInstructor.idRegistro})}"

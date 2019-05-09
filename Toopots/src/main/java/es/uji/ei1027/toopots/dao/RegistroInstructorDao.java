@@ -26,7 +26,7 @@ public class RegistroInstructorDao {
 	public void addRegistroInstructor(RegistroInstructor registroInstructor) {
 		jdbcTemplate.update("INSERT INTO registroInstructor VALUES(?, ?, ?, ?, ?, ?, ?)",
 				registroInstructor.getIdRegistro(), registroInstructor.getIdInstructor(), registroInstructor.getNombre(),
-				registroInstructor.getDireccion(),registroInstructor.getTelefono(),registroInstructor.getCurriculum(),registroInstructor.getAptitudes());
+				registroInstructor.getDireccion(),registroInstructor.getDni() ,registroInstructor.getTelefono(),registroInstructor.getCurriculum());
 	}
 
 	
@@ -40,9 +40,8 @@ public class RegistroInstructorDao {
 	 * que es clave primarias e idInstructor que es clave ajena)
 	 */
 	public void updateRegistroInstructor(RegistroInstructor registroInstructor) {
-		jdbcTemplate.update("UPDATE registroInstructor SET nombre=?, direccion=?, telefono=?, curriculum=?, aptitudes=? WHERE idRegistro=?",
-				registroInstructor.getNombre(), registroInstructor.getDireccion(), registroInstructor.getTelefono(), registroInstructor.getCurriculum(),
-				registroInstructor.getAptitudes());
+		jdbcTemplate.update("UPDATE registroInstructor SET nombre=?, direccion=?, dni=?, telefono=?, curriculum=? WHERE idRegistro=?",
+				registroInstructor.getNombre(), registroInstructor.getDireccion(), registroInstructor.getDni(), registroInstructor.getTelefono(), registroInstructor.getCurriculum());
 	}
 
 	/* Obtiene el registro instructor a partir de su idRegistro. Devuelve nulo si no existe. */

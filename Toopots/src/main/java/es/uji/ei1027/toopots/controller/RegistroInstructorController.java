@@ -14,7 +14,7 @@ import es.uji.ei1027.toopots.dao.RegistroInstructorDao;
 import es.uji.ei1027.toopots.model.RegistroInstructor;
 
 @Controller
-@RequestMapping("/instructor")
+@RequestMapping("/registroInstructor")
 public class RegistroInstructorController {
 
 	@Autowired
@@ -24,7 +24,7 @@ public class RegistroInstructorController {
 	@RequestMapping("/list")
 	public String listRegistroInstructor(Model model) {
 		model.addAttribute("registros", registroInstructorDao.getRegistroInstructores());
-		return "instructor/list";
+		return "registroInstructor/list";
 	}
 	
 	
