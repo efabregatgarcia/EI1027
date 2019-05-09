@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Gestionar los instructores</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+</head>
+<body>
+	<div class="container">
+		<h1>Lista de las solicitudes de los instructores</h1>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Identificador de solicitud:</th>
+					<th>Identificador de instructor:</th>
+					<th>Nombre:</th>
+					<th>Direccion:</th>
+					<th>Telefono:</th>
+					<th>Curriculum:</th>
+					<th>Aptitudes:</th>					
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="registroInstructor: ${registros}">
+					<td th:text="${registroInstructor.idRegistro}"></td>
+					<td th:text="${registroInstructor.idInstructor}"></td>
+					<td th:text="${registroInstructor.nombre}"></td>		
+					<td th:text="${registroInstructor.direccion}"></td>
+					<td th:text="${registroInstructor.telefono}"></td>
+					<td th:text="${registroInstructor.curriculum}"></td>
+					<td th:text="${registroInstructor.aptitudes}"></td>
+
+					<td><a
+						th:href="@{/registroInstructor/update/{idRegistro}(idRegistro=${registroInstructor.idRegistro})}"
+						class="btn btn-warning" role="button">Editar</a></td>
+					<td><a
+						th:href="@{/registroInstructor/delete/{idRegistro}(idRegistro=${registroInstructor.idRegistro})}"
+						class="btn btn-danger" role="button">Borrar</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<a href="add" class="btn btn-success" role="button">Añadir solicitud</a>
+	</div>
+</body>
+</html>

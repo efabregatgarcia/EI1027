@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Modificar instructor</title>
+<meta charset="UTF-8" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+</head>
+<body>
+	<h2>Modificar uun registro</h2>
+	<form action="#" th:action="@{/registroInstructor/update/{idRegistro}(idRegistro=${registroInstructor.idRegistro})}" 
+                     th:object="${registroInstructor}" method="post"> 
+		<table>
+			<tr>
+				<td><label>Identificador de la solicitud: </label></td>
+				<td><input type="text" th:field="*{idRegistro}" /></td>
+			</tr>
+			<tr>
+				<td><label>Identificador del instructor: </label></td>
+				<td><input type="text" th:field="*{idInstructor}" /></td>
+			</tr>
+			<tr>
+				<td><label>Nombre: </label></td>
+				<td><input type="text" th:field="*{nombre}" /></td>
+			</tr>
+			<tr>
+				<td><label>Direccion: </label></td>
+				<td><input type="text" th:field="*{direccion}" /></td>
+			</tr>
+			<tr>
+				<td><label>Telefono: </label></td>
+				<td><input type="text" th:field="*{telefono}" /></td>
+			</tr>
+			<tr>
+				<td><label>Curriculum: </label></td>
+				<td><input type="text" th:field="*{curriculum}" /></td>
+			<tr>
+			<tr>
+				<td><label>Aptitudes: </label></td>
+				<td><input type="text" th:field="*{aptitudes}" /></td>
+			<tr>
+				<td colspan="2"><input type="submit" value="Modificar una solicitud" /></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
