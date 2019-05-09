@@ -1,5 +1,7 @@
 package es.uji.ei1027.toopots.enumeracion;
 
+import es.uji.ei1027.toopots.enumeracion.EnumTipoUsuario.EnumTipoUsuarios;
+
 public class EnumTipoUsuario {
 
 
@@ -19,9 +21,9 @@ public class EnumTipoUsuario {
 			return this.tipo;
 		}
 
-		public static EnumTipoUsuarios getTipoEnum(String value) {
+		public static EnumTipoUsuarios getTipoEnum(EnumTipoUsuarios enumTipoUsuarios) {
 			for(EnumTipoUsuarios rec: values()) {
-				if(rec.getTipo().equals(value)) {
+				if(rec.getTipo().equals(enumTipoUsuarios)) {
 					return rec;
 				}
 			}
