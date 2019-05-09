@@ -24,16 +24,17 @@ public class ActividadDao {
 
 	/* Añade la actividad a la base de datos */
 	public void addActividad(Actividad actividad) {
-		jdbcTemplate.update("INSERT INTO actividad VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+		jdbcTemplate.update("INSERT INTO actividad VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
 				actividad.getIdActividad(), actividad.getIdInstructor(), actividad.getEstado(), actividad.getNombre(),
-				actividad.getDescripcion(), actividad.getDuracion(), actividad.getFecha(), actividad.getPrecio(),
-				actividad.getAsistentesMinimos(), actividad.getAsistentesMaximos(), actividad.getLugar(),
-				actividad.getPuntoLlegada(), actividad.getHoraLlegada());
+				actividad.getTipoActividad(), actividad.getDescripcion(), actividad.getDuracion(), actividad.getFecha(),
+				actividad.getPrecio(), actividad.getAsistentesMinimos(), actividad.getAsistentesMaximos(),
+				actividad.getLugar(), actividad.getPuntoLlegada(), actividad.getHoraLlegada());
 	}
 
 	public void deleteActividad(String actividad) {
 		jdbcTemplate.update("DELETE from actividad where idActividad=?", actividad);
 	}
+
 	public void deleteActividad(Actividad actividad) {
 		jdbcTemplate.update("DELETE from actividad where idActividad=?", actividad.getIdActividad());
 	}
@@ -43,9 +44,9 @@ public class ActividadDao {
 	 * que son claves primarias)
 	 */
 	public void updateActividad(Actividad actividad) {
-		jdbcTemplate.update("UPDATE actividad SET   estado=?, nombre=?, duracion=?, descripcion=?, fecha=?, "
+		jdbcTemplate.update("UPDATE actividad SET   estado=?, nombre=?, tipoActividad=?, duracion=?, descripcion=?, fecha=?, "
 				+ "precio=?, asistentesMinimos=?, asistentesMaximos=?, lugar=?, puntoLlegada=?, horaLlegada=? where idActividad=?",
-				actividad.getEstado(), actividad.getNombre(), actividad.getDuracion(), actividad.getDescripcion(),
+				actividad.getEstado(), actividad.getNombre(), actividad.getTipoActividad(), actividad.getDuracion(), actividad.getDescripcion(),
 				actividad.getFecha(), actividad.getPrecio(), actividad.getAsistentesMinimos(),
 				actividad.getAsistentesMaximos(), actividad.getLugar(), actividad.getPuntoLlegada(),
 				actividad.getHoraLlegada(), actividad.getIdActividad());
@@ -62,7 +63,7 @@ public class ActividadDao {
 			return null;
 		}
 	}
-	
+
 	public Actividad getActividad(String idActividad) {
 		try {
 			return jdbcTemplate.queryForObject("SELECT * from actividad WHERE idActividad=?", new ActividadRowMapper(),

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Crear un nuevo instructor</title>
+<title>Crear una nueva reserva</title>
 <meta charset="UTF-8" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 </head>
 <body>
-	<h2>Añadir un instructor</h2>
-	<form action="#" th:action="@{/instructor/add}"
-						th:object="${instructor}" method="post">
+	<h2>Añadir una reserva</h2>
+	<form action="#" th:action="@{/reserva/add}"
+						th:object="${reserva}" method="post">
 		<table>
 			<tr>
 				<td><label>Identificador de la reserva: </label></td>
@@ -29,7 +29,7 @@
 			</tr>
 			<tr>
 				<td><label>Numero de transaccion: </label></td>
-				<td><input type="text" th:field="*{numeroTransacion}" /></td>
+				<td><input type="text" th:field="*{numeroTransaccion}" /></td>
 			</tr>
 			<tr>
 				<td><label>Fecha: </label></td>

@@ -10,6 +10,7 @@ public class Actividad {
 	private String idInstructor;
 	private String estado;
 	private String nombre;
+	private String tipoActividad;
 	private String descripcion;
 	private int duracion;
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
@@ -100,13 +101,19 @@ public class Actividad {
 	public void setHoraLlegada(LocalTime horaLlegada) {
 		this.horaLlegada = horaLlegada;
 	}
+	public String getTipoActividad() {
+		return tipoActividad;
+	}
+	public void setTipoActividad(String tipoActividad) {
+		this.tipoActividad = tipoActividad;
+	}
 	@Override
 	public String toString() {
 		return "Actividad [idActividad=" + idActividad + ", idInstructor=" + idInstructor + ", estado=" + estado
-				+ ", nombre=" + nombre + ", descripcion=" + descripcion + ", duracion=" + duracion + ", fecha=" + fecha
-				+ ", precio=" + precio + ", asistentesMinimos=" + asistentesMinimos + ", asistentesMaximos="
-				+ asistentesMaximos + ", lugar=" + lugar + ", puntoLlegada=" + puntoLlegada + ", horaLlegada="
-				+ horaLlegada + "]";
+				+ ", nombre=" + nombre + ", tipoActividad=" + tipoActividad + ", descripcion=" + descripcion
+				+ ", duracion=" + duracion + ", fecha=" + fecha + ", precio=" + precio + ", asistentesMinimos="
+				+ asistentesMinimos + ", asistentesMaximos=" + asistentesMaximos + ", lugar=" + lugar
+				+ ", puntoLlegada=" + puntoLlegada + ", horaLlegada=" + horaLlegada + "]";
 	}
 	
 	
