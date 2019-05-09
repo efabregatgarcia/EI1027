@@ -1,11 +1,12 @@
 package es.uji.ei1027.toopots.model;
 
 import es.uji.ei1027.toopots.enumeracion.EnumTipoUsuario;
+import es.uji.ei1027.toopots.enumeracion.EnumTipoUsuario.EnumTipoUsuarios;
 
 public class Usuario {
 	String idUsuario;
 	String password; 
-	EnumTipoUsuario enumTipo;
+	EnumTipoUsuarios enumTipo;
 	
 	public String getIdUsuario() {
 		return idUsuario; 
@@ -22,26 +23,26 @@ public class Usuario {
 	public void setPassword(String password) {
 	   this.password = password;
 	}
-	public EnumTipoUsuario getEnumTipoUsuario() {
+	public EnumTipoUsuarios getEnumTipoUsuario() {
 		return this.enumTipo;
 		
 	}
 	public boolean isCliente() {
-		if (enumTipo == EnumTipoUsuario.CLIENTE) {
+		if (enumTipo == EnumTipoUsuarios.CLIENTE) {
 			return true;
 		}
 		return false;
 	}
 	public boolean isInstructor() {
 		
-		if (enumTipo == EnumTipoUsuario.INSTRUCTOR) {
+		if (enumTipo == EnumTipoUsuarios.INSTRUCTOR) {
 			return true;
 		}
 		return false;
 	}
 	public boolean isAdministrador() {
 		
-		if (enumTipo == EnumTipoUsuario.Administrador) {
+		if (enumTipo == EnumTipoUsuarios.ADMINISTRADOR) {
 			return true;
 		}
 		return false;
