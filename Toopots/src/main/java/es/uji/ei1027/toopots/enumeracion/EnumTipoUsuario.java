@@ -1,9 +1,9 @@
-package es.uji.ei1027.enumeracion;
+package es.uji.ei1027.toopots.enumeracion;
 
 public class EnumTipoUsuario {
 
 
-	public enum EnumUsuarios {
+	public enum EnumTipoUsuarios {
 
 		CLIENTE("CL"),
 		INSTRUCTOR("INS"),
@@ -11,7 +11,7 @@ public class EnumTipoUsuario {
 
 		private final String tipo;
 
-		private EnumUsuarios(String tipo) {
+		private EnumTipoUsuarios(String tipo) {
 			this.tipo= tipo;
 		}
 
@@ -19,8 +19,8 @@ public class EnumTipoUsuario {
 			return this.tipo;
 		}
 
-		public static EnumUsuarios getTipoEnum(String value) {
-			for(EnumUsuarios rec: values()) {
+		public static EnumTipoUsuarios getTipoEnum(String value) {
+			for(EnumTipoUsuarios rec: values()) {
 				if(rec.getTipo().equals(value)) {
 					return rec;
 				}
@@ -29,4 +29,5 @@ public class EnumTipoUsuario {
 		}
 
 	}
+
 }
