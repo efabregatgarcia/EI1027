@@ -2,33 +2,35 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Gestionar las Actividades  </title>
+<title>Gestionar las Actividades</title>
 
 <meta charset="UTF-8" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 </head>
 <body>
-<a href="index" class="btn btn-success" role="button">Inicio</a>
+	<a href="index" class="btn btn-success" role="button">Inicio</a>
 	<div class="container">
 		<h1>Lista de las Actividades</h1>
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th>Identificador de la actividad: </th>
-					<th>Identificador del instructor: </th>
-					<th>Estado: </th>
-					<th>Nombre de la actividad: </th>
-					<th>Nivel de la actividad: </th>
-					<th>Duracion: </th>
-					<th>Descripción: </th>
-					<th>Fecha de la actividad: </th>
-					<th>Precio por persona: </th>
-					<th>Asistentes Mínimos: </th>
-					<th>Asistentes Máximos: </th>
-					<th>Lugar de la actividad: </th>
-					<th>Destino final de la actividad: </th>
-					<th>Hora de la llegada al destino: </th>
+					<th>Identificador de la actividad:</th>
+					<th>Identificador del instructor:</th>
+					<th>Estado:</th>
+					<th>Nombre de la actividad:</th>
+					
+					<th>Nivel de la actividad:</th>
+					<th>Tipo de la actividad:</th>
+					<th>Duracion:</th>
+					<th>Descripción:</th>
+					<th>Fecha de la actividad:</th>
+					<th>Precio por persona:</th>
+					<th>Asistentes Mínimos:</th>
+					<th>Asistentes Máximos:</th>
+					<th>Lugar de la actividad:</th>
+					<th>Destino final de la actividad:</th>
+					<th>Hora de la llegada al destino:</th>
 					<th></th>
 					<th></th>
 				</tr>
@@ -39,6 +41,8 @@
 					<td th:text="${actividad.idInstructor}"></td>
 					<td th:text="${actividad.estado}"></td>
 					<td th:text="${{actividad.nombre}}"></td>
+					<td th:text="${{actividad.nivelActividad}}"></td>
+					<td th:text="${{actividad.tipoActividad}}"></td>
 					<td th:text="${{actividad.duracion}}"></td>
 					<td th:text="${{actividad.descripcion}}"></td>
 					<td th:text="${{actividad.fecha}}"></td>
@@ -48,7 +52,7 @@
 					<td th:text="${{actividad.lugar}}"></td>
 					<td th:text="${{actividad.puntoLlegada}}"></td>
 					<td th:text="${{actividad.horaLlegada}}"></td>
-					
+
 					<td><a
 						th:href="@{/actividad/update/{idActividad}(idActividad=${actividad.idActividad})}"
 						class="btn btn-warning" role="button">Editar</a></td>
@@ -58,7 +62,8 @@
 				</tr>
 			</tbody>
 		</table>
-		<a href="add" class="btn btn-success" role="button">Añadir Actividad</a>
+		<a href="add" class="btn btn-success" role="button">Añadir
+			Actividad</a>
 	</div>
 </body>
 </html>

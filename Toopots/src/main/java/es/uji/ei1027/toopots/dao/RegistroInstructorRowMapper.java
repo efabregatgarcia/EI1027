@@ -17,7 +17,6 @@ public class RegistroInstructorRowMapper implements RowMapper<RegistroInstructor
 		registroInstructor.setDni(rs.getString("dni"));
 		registroInstructor.setTelefono(rs.getString("telefono"));
 		registroInstructor.setCurriculum(rs.getString("curriculum"));
-		registroInstructor.setAptitudes(rs.getString("aptitudes"));
 
 		return registroInstructor;
 	}

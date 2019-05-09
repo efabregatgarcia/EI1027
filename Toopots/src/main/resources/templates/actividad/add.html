@@ -27,14 +27,14 @@
 				<td><label>Nombre de la actividad: </label></td>
 				<td><input type="text" th:field="*{nombre}" /></td>
 			</tr>
+			
 			<tr>
 				<td><label>Nivel de la actividad: </label></td>
-				<td><select name="ta" type="text" th:field=*{tipoActividad}>
-						<option value="1">Nivel bajo</option>
-						<option value="2">Nivel medio</option>
-						<option value="3">Nivel alto</option>
-
-				</select></td>
+				<td><input type="number" th:field="*{nivelActividad}" /></td>
+			</tr>
+			<tr>
+				<td><label>Tipo de la actividad: </label></td>
+				<td><input type="text" th:field="*{tipoActividad}" /></td>
 			</tr>
 			<tr>
 				<td><label>Duración de la actividad: </label></td>

@@ -6,7 +6,6 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 import org.springframework.jdbc.core.RowMapper;
-
 import es.uji.ei1027.toopots.model.Actividad;
 
 public class ActividadRowMapper implements RowMapper<Actividad> {
@@ -17,6 +16,7 @@ public class ActividadRowMapper implements RowMapper<Actividad> {
 		actividad.setIdActividad(rs.getString("idActividad"));
 		actividad.setIdInstructor(rs.getString("idInstructor"));
 		actividad.setDescripcion(rs.getString("descripcion"));
+		actividad.setNivelActividad(rs.getInt("nivelActividad"));
 		actividad.setTipoActividad(rs.getString("tipoActividad"));
 		actividad.setDuracion(rs.getInt("duracion"));
 		actividad.setPrecio(rs.getInt("precio"));

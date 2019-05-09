@@ -24,11 +24,12 @@ public class ActividadDao {
 
 	/* Añade la actividad a la base de datos */
 	public void addActividad(Actividad actividad) {
-		jdbcTemplate.update("INSERT INTO actividad VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+		jdbcTemplate.update("INSERT INTO actividad VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
 				actividad.getIdActividad(), actividad.getIdInstructor(), actividad.getEstado(), actividad.getNombre(),
-				actividad.getTipoActividad(), actividad.getDescripcion(), actividad.getDuracion(), actividad.getFecha(),
-				actividad.getPrecio(), actividad.getAsistentesMinimos(), actividad.getAsistentesMaximos(),
-				actividad.getLugar(), actividad.getPuntoLlegada(), actividad.getHoraLlegada());
+				actividad.getNivelActividad(), actividad.getTipoActividad(), actividad.getDescripcion(),
+				actividad.getDuracion(), actividad.getFecha(), actividad.getPrecio(), actividad.getAsistentesMinimos(),
+				actividad.getAsistentesMaximos(), actividad.getLugar(), actividad.getPuntoLlegada(),
+				actividad.getHoraLlegada());
 	}
 
 	public void deleteActividad(String actividad) {
@@ -44,12 +45,13 @@ public class ActividadDao {
 	 * que son claves primarias)
 	 */
 	public void updateActividad(Actividad actividad) {
-		jdbcTemplate.update("UPDATE actividad SET   estado=?, nombre=?, tipoActividad=?, duracion=?, descripcion=?, fecha=?, "
-				+ "precio=?, asistentesMinimos=?, asistentesMaximos=?, lugar=?, puntoLlegada=?, horaLlegada=? where idActividad=?",
-				actividad.getEstado(), actividad.getNombre(), actividad.getTipoActividad(), actividad.getDuracion(), actividad.getDescripcion(),
-				actividad.getFecha(), actividad.getPrecio(), actividad.getAsistentesMinimos(),
-				actividad.getAsistentesMaximos(), actividad.getLugar(), actividad.getPuntoLlegada(),
-				actividad.getHoraLlegada(), actividad.getIdActividad());
+		jdbcTemplate.update(
+				"UPDATE actividad SET   estado=?, nombre=?, nivelActividad=?, tipoActividad=?, duracion=?, descripcion=?, fecha=?, "
+						+ "precio=?, asistentesMinimos=?, asistentesMaximos=?, lugar=?, puntoLlegada=?, horaLlegada=? where idActividad=?",
+				actividad.getEstado(), actividad.getNombre(), actividad.getNivelActividad(), actividad.getTipoActividad(), actividad.getDuracion(),
+				actividad.getDescripcion(), actividad.getFecha(), actividad.getPrecio(),
+				actividad.getAsistentesMinimos(), actividad.getAsistentesMaximos(), actividad.getLugar(),
+				actividad.getPuntoLlegada(), actividad.getHoraLlegada(), actividad.getIdActividad());
 	}
 
 	/*
