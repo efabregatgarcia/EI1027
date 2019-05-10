@@ -5,7 +5,7 @@ import org.springframework.validation.Validator;
 
 import es.uji.ei1027.toopots.model.Usuario;
 
-public class UsuarioValidator implements Validator{
+public class UsuarioValidator implements Validator {
 
 	@Override
 	public boolean supports(Class<?> cls) {
@@ -21,10 +21,7 @@ public class UsuarioValidator implements Validator{
 			errors.rejectValue("error", "obligatori", "Usuario o contraseña incorrecta");
 			return;
 		}
-		
+
 	}
-
-
-	
 
 }

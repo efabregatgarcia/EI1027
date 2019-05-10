@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Llista de usuarios del sistema</title>
+<meta charset="UTF-8"/>
+<!-- Afegim una fulla d'estil (Bootstrap) -->
+<link rel="stylesheet"   
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="/css/natacio.css" 
+                                    th:href="@{/css/natacio.css}"/>
+</head>
+
+<body>
+	<h1>Llista de usuarios del sistema</h1>
+    <div th:if="${#lists.isEmpty(users)}">
+       No hay usuarios
+    </div>
+    <table th:unless="${#lists.isEmpty(users)}"  class="table table-condensed">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <tr th:each="user: ${users}">
+          <td th:text="${user.username}"></td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="/" class="btn btn-primary" role="button">Volver</a>
+</body>
+</html>
