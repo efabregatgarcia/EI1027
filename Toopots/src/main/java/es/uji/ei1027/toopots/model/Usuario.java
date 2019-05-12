@@ -45,6 +45,14 @@ public class Usuario {
 			return true;
 		}
 		return false;
+	}
+
+	public EnumTipoUsuarios getEnumTipo() {
+		return enumTipo;
+	}
+
+	public void setEnumTipo(EnumTipoUsuarios enumTipo) {
+		this.enumTipo = enumTipo;
 	}	
 
 }

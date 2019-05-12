@@ -1,7 +1,5 @@
 package es.uji.ei1027.toopots.enumeracion;
 
-import es.uji.ei1027.toopots.enumeracion.EnumTipoUsuario.EnumTipoUsuarios;
-
 public class EnumTipoUsuario {
 
 
