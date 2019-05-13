@@ -6,20 +6,13 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 public class Cliente {
 
-	private String idCliente;
+	
 	private String nombre;
-	private String email;
+	private String emailCliente;
 	private String sexo;
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
 	private LocalDate fechaNacimiento;
 
-	public String getIdCliente() {
-		return idCliente;
-	}
-
-	public void setIdCliente(String idCliente) {
-		this.idCliente = idCliente;
-	}
 
 	public String getNombre() {
 		return nombre;
@@ -29,12 +22,12 @@ public class Cliente {
 		this.nombre = nombre;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getEmailCliente() {
+		return emailCliente;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setEmailCliente(String email) {
+		this.emailCliente = emailCliente;
 	}
 
 	public String getSexo() {
@@ -55,8 +48,10 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		return "Cliente [idCliente=" + idCliente + ", nombre=" + nombre + ", email=" + email + ", sexo=" + sexo
-				+ ", fechaNacimiento=" + fechaNacimiento + "]";
+		return "Cliente [nombre=" + nombre + ", emailCliente=" + emailCliente + ", sexo=" + sexo + ", fechaNacimiento="
+				+ fechaNacimiento + "]";
 	}
+
+
 
 }

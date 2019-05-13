@@ -25,7 +25,7 @@ public class ReservaDao {
 	/* Añade la actividad a la base de datos */
 	public void addReserva(Reserva reserva) {
 		jdbcTemplate.update("INSERT INTO reserva VALUES(?, ?, ?, ?, ?, ?, ?, ?)", reserva.getIdReserva(),
-				reserva.getIdActividad(), reserva.getIdCliente(), reserva.getEstadoPagamiento(),
+				reserva.getIdActividad(), reserva.getemailCliente(), reserva.getEstadoPagamiento(),
 				reserva.getNumeroTransaccion(), reserva.getFecha(), reserva.getNumeroAsistentes(),
 				reserva.getPrecioPersona());
 	}

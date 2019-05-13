@@ -25,7 +25,7 @@ public class ActividadDao {
 	/* Añade la actividad a la base de datos */
 	public void addActividad(Actividad actividad) {
 		jdbcTemplate.update("INSERT INTO actividad VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
-				actividad.getIdActividad(), actividad.getIdInstructor(), actividad.getEstado(), actividad.getNombre(),
+				actividad.getIdActividad(), actividad.getEmailInstructor(), actividad.getEstado(), actividad.getNombre(),
 				actividad.getNivelActividad(), actividad.getTipoActividad(), actividad.getDescripcion(),
 				actividad.getDuracion(), actividad.getFecha(), actividad.getPrecio(), actividad.getAsistentesMinimos(),
 				actividad.getAsistentesMaximos(), actividad.getLugar(), actividad.getPuntoLlegada(),

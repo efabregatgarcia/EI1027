@@ -2,19 +2,19 @@ package es.uji.ei1027.toopots.model;
 
 public class Instructor {
 
-	private String idInstructor;
+	private String EmailInstructor;
 	private String estado;
 	private String nombre;
 	private String domicilio;
 	private String email;
 	private String iban;
 
-	public String getIdInstructor() {
-		return idInstructor;
+	public String getEmailInstructor() {
+		return EmailInstructor;
 	}
 
-	public void setIdInstructor(String idInstructor) {
-		this.idInstructor = idInstructor;
+	public void setEmailInstructor(String EmailInstructor) {
+		this.EmailInstructor = EmailInstructor;
 	}
 
 	public String getEstado() {
@@ -59,11 +59,12 @@ public class Instructor {
 	public void setIban(String iban) {
 		this.iban = iban;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Instructor [idInstructor=" + idInstructor + ", estado=" + estado + ", nombre=" + nombre + ", domicilio="
-				+ domicilio + ", email=" + email + ", iban=" + iban + "]";
+		return "Instructor [EmailInstructor=" + EmailInstructor + ", estado=" + estado + ", nombre=" + nombre
+				+ ", domicilio=" + domicilio + ", email=" + email + ", iban=" + iban + "]";
 	}
-
+	
+	
 }
