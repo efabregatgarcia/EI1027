@@ -1,43 +1,68 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
-<title>Crear un nuevo instructor</title>
+
+<style>
+ul {
+	justify-content: center;
+	display: flex;
+}
+</style>
+
+<title>Añadir instructor</title>
 <meta charset="UTF-8" />
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 </head>
 <body>
+
+	<p align="center">
+		<font size="15" color="red">TooPots</font>
+	</p>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#navbarNav" aria-controls="navbarNav"
+		aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<ul class="nav nav-pills">
+		<li class="nav-item"><a class="nav-link active" href="/usuario/add">Registrarse</a>
+		</li>
+		<li class="nav-item"><a class="nav-link" href="/login/login">Log in</a></li>
+		<li class="nav-item"><a class="nav-link" href="/administradores/admin">Ventana Administradores</a>
+		<li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+			data-toggle="dropdown" href="/sobre/sobreNosotros" role="button" aria-haspopup="true"
+			aria-expanded="false">SobreNosotros</a>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="/sobre/contacta">Contactanos</a> 
+			</div></li>
+	</ul>
+	
+	<br></br>
+	
 	<h2>Añadir un instructor</h2>
 	<form action="#" th:action="@{/instructor/add}"
 						th:object="${instructor}" method="post">
-		<table>
-			<tr>
-				<td><label>Identificador del instructor: </label></td>
-				<td><input type="text" th:field="*{idInstructor}" /></td>
-			</tr>
-			<tr>
-				<td><label>Nombre: </label></td>
-				<td><input type="text" th:field="*{nombre}" /></td>
-			</tr>
-			<tr>
-				<td><label>Estado: </label></td>
-				<td><input type="text" th:field="*{estado}" /></td>
-			</tr>
-			<tr>
-				<td><label>Domicilio: </label></td>
-				<td><input type="text" th:field="*{domicilio}" /></td>
-			</tr>
-			<tr>
-				<td><label>Email: </label></td>
-				<td><input type="text" th:field="*{email}" /></td>
-			</tr>
-			<tr>
-				<td><label>Iban: </label></td>
-				<td><input type="text" th:field="*{iban}" /></td>
-			<tr>
-				<td colspan="2"><input type="submit" value="Añadir instructor" /></td>
-			</tr>
-		</table>
-	</form>
+		<div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail">Email</label>
+      <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+       <label for="inputEstado">Estado</label>
+   		<input type="text" class="form-control" id="inputEstado" placeholder="Activo,Baja temporal,Baja definitiva...">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="inputDireccion">Direccion</label>
+    <input type="text" class="form-control" id="inputDireccion" placeholder="Calle,numero,apartamento...">
+  </div>
+  <div class="form-group">
+    <label for="inputIBAN">IBAN</label>
+    <input type="text" class="form-control" id="inputIBAN" placeholder="IBAN">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Dar de alta un instructor</button>
+</form>	
 </body>
 </html>
