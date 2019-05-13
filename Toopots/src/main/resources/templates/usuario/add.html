@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"> 
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<style>
-	ul {
-		justify-content: center;
-		display: flex;
-	}
-	</style>
-	<title>Nuevo usuario</title>
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+<style>
+ul {
+	justify-content: center;
+	display: flex;
+}
+</style>
+<meta charset="UTF-8" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
 </head>
 <body>
-<p align="center">
-	<font size="15" color="red">TooPots</font>
+	<p align="center">
+		<font size="15" color="red">TooPots</font>
 	</p>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#navbarNav" aria-controls="navbarNav"
@@ -21,38 +21,45 @@
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<ul class="nav nav-pills">
-		<li class="nav-item"><a class="nav-link active" href="/usuario/add">Registrarse</a>
-		</li>
-		<li class="nav-item"><a class="nav-link" href="/login/login">Log in</a></li>
-		<li class="nav-item"><a class="nav-link" href="/administradores/admin">Ventana Administradores</a>
+		<li class="nav-item"><a class="nav-link active"
+			href="/usuario/add">Registrarse</a></li>
+		<li class="nav-item"><a class="nav-link" href="/login/login">Log
+				in</a></li>
+		<li class="nav-item"><a class="nav-link"
+			href="/administradores/admin">Ventana Administradores</a>
 		<li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
-			data-toggle="dropdown" href="/sobre/sobreNosotros" role="button" aria-haspopup="true"
-			aria-expanded="false">SobreNosotros</a>
+			data-toggle="dropdown" href="/sobre/sobreNosotros" role="button"
+			aria-haspopup="true" aria-expanded="false">SobreNosotros</a>
 			<div class="dropdown-menu">
-				<a class="dropdown-item" href="/sobre/contacta">Contactanos</a> 
+				<a class="dropdown-item" href="/sobre/contacta">Contactanos</a>
 			</div></li>
 	</ul>
-	
+
 	<br></br>
 	<br></br>
 
 	<ul>
-	    <form action="#" th:action="@{/usuario/add}" th:object="${usuario}" method="POST">
-	      <table>
-	        <tr>
-	            <td><label>Usuario</label></td>
-	            <td><input type="text" th:field="*{identificador}" /></td>
-	        </tr>
-	        <tr>
-	            <td><label>Contraseña</label></td>
-	            <td><input type="password" th:field="*{clave}" /></td>
-	        </tr>
-	        <tr>
-	            <td align="center" colspan="2"><input type="submit" value="Registrarse" /></td>
-	        </tr>
-	        
-	      </table>
-	    </form>
-	 </ul>
+	<form action="#" th:action="@{/login/login}" th:object="${usuario}"
+			method="POST">
+			
+		<table>
+				<tr>
+				
+					<td><label>Usuario</label></td>
+					<td><input type="text" th:field="*{identificador}" /></td>
+				</tr>
+				<tr>
+					<td><label>Contraseña</label></td>
+					<td><input type="password" th:field="*{clave}" /></td>
+				</tr>
+				<tr>
+					<td align="center" colspan="2"><input type="submit"
+						value="Entrar" /></td>
+				</tr>
+				
+			</table>
+		</form>
+	</ul>
+	
 </body>
 </html>
