@@ -2,6 +2,7 @@ package es.uji.ei1027.toopots.controller;
 
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,7 +22,8 @@ import es.uji.ei1027.toopots.validator.UsuarioValidator;
 
 public class LoginController {
 	
-	@Autowired
+	@Autowired(required=false)
+	//@Qualifier("UsuarioDao")
 	private UsuarioDao usuarioDao;
 	
 	
