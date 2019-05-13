@@ -7,7 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 public class Actividad {
 	private String idActividad;
-	private String idInstructor;
+	private String emailInstructor;
 	private String estado;
 	private String nombre;
 	private int nivelActividad;
@@ -48,12 +48,12 @@ public class Actividad {
 		this.idActividad = idActividad;
 	}
 
-	public String getIdInstructor() {
-		return idInstructor;
+	public String getEmailInstructor() {
+		return emailInstructor;
 	}
 
-	public void setIdInstructor(String idInstructor) {
-		this.idInstructor = idInstructor;
+	public void setEmailInstructor(String emailInstructor) {
+		this.emailInstructor = emailInstructor;
 	}
 
 	public String getEstado() {
@@ -146,11 +146,13 @@ public class Actividad {
 
 	@Override
 	public String toString() {
-		return "Actividad [idActividad=" + idActividad + ", idInstructor=" + idInstructor + ", estado=" + estado
-				+ ", nombre=" + nombre + ", tipoActividad=" + tipoActividad + ", nivelActividad=" + nivelActividad
+		return "Actividad [idActividad=" + idActividad + ", emailInstructor=" + emailInstructor + ", estado=" + estado
+				+ ", nombre=" + nombre + ", nivelActividad=" + nivelActividad + ", tipoActividad=" + tipoActividad
 				+ ", descripcion=" + descripcion + ", duracion=" + duracion + ", fecha=" + fecha + ", precio=" + precio
 				+ ", asistentesMinimos=" + asistentesMinimos + ", asistentesMaximos=" + asistentesMaximos + ", lugar="
 				+ lugar + ", puntoLlegada=" + puntoLlegada + ", horaLlegada=" + horaLlegada + "]";
 	}
+
+	
 
 }

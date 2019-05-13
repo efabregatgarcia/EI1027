@@ -7,7 +7,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Reserva {
 	private String idReserva;
 	private String idActividad;
-	private String idCliente;
+	private String emailCliente;
 	private String estadoPagamiento;
 	private String numeroTransaccion;
 	@DateTimeFormat(pattern = "dd/MM/yyyy")
@@ -26,11 +26,11 @@ public class Reserva {
 	public void setIdActividad(String idActividad) {
 		this.idActividad = idActividad;
 	}
-	public String getIdCliente() {
-		return idCliente;
+	public String getemailCliente() {
+		return emailCliente;
 	}
-	public void setIdCliente(String idCliente) {
-		this.idCliente = idCliente;
+	public void setemailCliente(String idCliente) {
+		this.emailCliente = emailCliente;
 	}
 	public String getEstadoPagamiento() {
 		return estadoPagamiento;
@@ -64,8 +64,9 @@ public class Reserva {
 	}
 	@Override
 	public String toString() {
-		return "Reserva [idReserva=" + idReserva + ", idActividad=" + idActividad + ", idCliente=" + idCliente
+		return "Reserva [idReserva=" + idReserva + ", idActividad=" + idActividad + ", emailCliente=" + emailCliente
 				+ ", estadoPagamiento=" + estadoPagamiento + ", numeroTransaccion=" + numeroTransaccion + ", fecha="
 				+ fecha + ", numeroAsistentes=" + numeroAsistentes + ", precioPersona=" + precioPersona + "]";
 	}
+	
 }

@@ -14,7 +14,7 @@ import es.uji.ei1027.toopots.model.Instructor;
 
 @Repository
 public class InstructorDao {
-	
+
 	private JdbcTemplate jdbcTemplate;
 
 	@Autowired
@@ -24,31 +24,32 @@ public class InstructorDao {
 
 	/* Añade el intructor a la base de datos */
 	public void addInstructor(Instructor instructor) {
-		jdbcTemplate.update("INSERT INTO instructor VALUES(?, ?, ?, ?, ?, ?)",
-				instructor.getIdInstructor(), instructor.getEstado(), instructor.getNombre(),
-				instructor.getDomicilio(),instructor.getEmail(),instructor.getIban());
+		jdbcTemplate.update("INSERT INTO instructor VALUES(?, ?, ?, ?, ?)", instructor.getEmailInstructor(),
+				instructor.getEstado(), instructor.getNombre(), instructor.getDomicilio(), instructor.getIban());
 	}
 
-	
-
 	public void deleteInstructor(String instructor) {
-		jdbcTemplate.update("DELETE from instructor where idinstructor=?", instructor);
+		jdbcTemplate.update("DELETE from instructor where emailInstructor=?", instructor);
 	}
 
 	/*
-	 * Actualiza los atributos del instructor (menos la idInstructor
-	 * que es clave primarias)
+	 * Actualiza los atributos del instructor (menos la idInstructor que es clave
+	 * primarias)
 	 */
 	public void updateInstructor(Instructor instructor) {
-		jdbcTemplate.update("UPDATE instructor SET  estado=?, nombre=?, domicilio=?, email=?, iban=? WHERE idInstructor=?",
-				instructor.getEstado(), instructor.getNombre(), instructor.getDomicilio(), instructor.getEmail(),
-				instructor.getIban(), instructor.getIdInstructor());
+		jdbcTemplate.update("UPDATE instructor SET  estado=?, nombre=?, domicilio=?, iban=? WHERE emailInstructor=?",
+				instructor.getEstado(), instructor.getNombre(), instructor.getDomicilio(), instructor.getIban(),
+				instructor.getEmailInstructor());
 	}
 
-	/* Obtiene el instructor a partir de su idInstructor. Devuelve nulo si no existe. */
-	public Instructor getInstructor(String idInstructor) {
+	/*
+	 * Obtiene el instructor a partir de su idInstructor. Devuelve nulo si no
+	 * existe.
+	 */
+	public Instructor getInstructor(String emailInstructor) {
 		try {
-			return jdbcTemplate.queryForObject("SELECT * from instructor WHERE idInstructor=?", new InstructorRowMapper(), idInstructor);
+			return jdbcTemplate.queryForObject("SELECT * from instructor WHERE emailInstructor=?",
+					new InstructorRowMapper(), emailInstructor);
 		} catch (EmptyResultDataAccessException e) {
 			return null;
 		}

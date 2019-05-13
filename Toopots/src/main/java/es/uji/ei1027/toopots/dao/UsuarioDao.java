@@ -26,31 +26,31 @@ private JdbcTemplate jdbcTemplate;
 		@Override
 		public Usuario mapRow(ResultSet rs, int rowNum) throws SQLException {
 			Usuario usuario = new Usuario();
-			usuario.setIdUsuario(rs.getString("idUsuario"));
-			usuario.setPassword(rs.getString("password"));
+			usuario.setEmailUsuario(rs.getString("emailUsuario"));
+			usuario.setContrasenya(rs.getString("contrasenya"));
 			return usuario;
 		}
 	}
 	
 	public List<Usuario> getUsuarios() {
-		return this.jdbcTemplate.query("select * from usuarios", new UsuarioMapper());
+		return this.jdbcTemplate.query("select * from usuario", new UsuarioMapper());
 	}
 	
-	public Usuario getUsuarios(String idUsuario) {
-		return this.jdbcTemplate.queryForObject("select * from usuarios where identificador = ?",
-				new UsuarioMapper(), idUsuario);
+	public Usuario getUsuarios(String emailUsuario) {
+		return this.jdbcTemplate.queryForObject("select * from usuario where emailUsuario = ?",
+				new UsuarioMapper(), emailUsuario);
 	}
 	
-	public Usuario getUsuario(String idUsuario, String password) {
-		return this.jdbcTemplate.queryForObject("select * from usuarios where identificador = ? and clave = ?", 
-				new UsuarioMapper(), idUsuario, password);
+	public Usuario getUsuario(String emailUsuario, String contrasenya) {
+		return this.jdbcTemplate.queryForObject("select * from usuario where emailUsuario=? and contrasenya=?", 
+				new UsuarioMapper(), emailUsuario, contrasenya);
 	}
 	
 	public void addUsuario(Usuario usuario) {
 		this.jdbcTemplate.update(" "
-				+ " insert into usuarios "
+				+ " insert into usuario "
 				+ " values (?, ?) " ,
-				usuario.getIdUsuario(), usuario.getPassword());
+				usuario.getEmailUsuario(), usuario.getContrasenya());
 	}
 	
 	public void updateUsuario(Usuario usuario, String idUusario) {
@@ -59,7 +59,7 @@ private JdbcTemplate jdbcTemplate;
 				+ " identificador = ?, "
 				+ " clave = ? "
 				+ " where identificador = ? " ,
-				usuario.getIdUsuario(), usuario.getPassword(), idUusario);
+				usuario.getEmailUsuario(), usuario.getContrasenya(), idUusario);
 	}
 	
 	public void deleteUsuario(String usuario) {

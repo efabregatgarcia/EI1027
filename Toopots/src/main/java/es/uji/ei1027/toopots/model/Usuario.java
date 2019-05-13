@@ -3,24 +3,22 @@ package es.uji.ei1027.toopots.model;
 import es.uji.ei1027.toopots.enumeracion.EnumTipoUsuario.EnumTipoUsuarios;
 
 public class Usuario {
-	String idUsuario;
-	String password; 
+	String emailUsuario;
+	String contrasenya; 
 	EnumTipoUsuarios enumTipo;
 	
-	public String getIdUsuario() {
-		return idUsuario; 
+	
+	public String getEmailUsuario() {
+		return emailUsuario;
 	}
-
-	public void setIdUsuario(String idUsuario) {
-	    this.idUsuario = idUsuario; 
+	public void setEmailUsuario(String emailUsuario) {
+		this.emailUsuario = emailUsuario;
 	}
-
-	public String getPassword() {
-	   return password; 
+	public String getContrasenya() {
+		return contrasenya;
 	}
-
-	public void setPassword(String password) {
-	   this.password = password;
+	public void setContrasenya(String contrasenya) {
+		this.contrasenya = contrasenya;
 	}
 	public EnumTipoUsuarios getEnumTipoUsuario() {
 		return this.enumTipo;

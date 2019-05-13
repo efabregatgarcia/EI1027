@@ -3,7 +3,7 @@ package es.uji.ei1027.toopots.model;
 public class RegistroInstructor {
 	
 	private String idRegistro;
-	private String idInstructor;
+	private String emailInstructor;
 	private String nombre;
 	private String direccion;
 	private String dni;
@@ -23,11 +23,11 @@ public class RegistroInstructor {
 	public void setIdRegistro(String idRegistro) {
 		this.idRegistro = idRegistro;
 	}
-	public String getIdInstructor() {
-		return idInstructor;
+	public String getEmailInstructor() {
+		return emailInstructor;
 	}
-	public void setIdInstructor(String idInstructor) {
-		this.idInstructor = idInstructor;
+	public void setEmailInstructor(String emailInstructor) {
+		this.emailInstructor = emailInstructor;
 	}
 	public String getNombre() {
 		return nombre;
@@ -55,10 +55,11 @@ public class RegistroInstructor {
 	}
 	@Override
 	public String toString() {
-		return "RegistroInstructor [idRegistro=" + idRegistro + ", idInstructor=" + idInstructor + ", nombre=" + nombre
-				+ ", direccion=" + direccion + ", dni=" + dni + ", telefono=" + telefono + ", curriculum=" + curriculum
-				+ "]";
+		return "RegistroInstructor [idRegistro=" + idRegistro + ", emailInstructor=" + emailInstructor + ", nombre="
+				+ nombre + ", direccion=" + direccion + ", dni=" + dni + ", telefono=" + telefono + ", curriculum="
+				+ curriculum + "]";
 	}
+	
 	
 
 	
