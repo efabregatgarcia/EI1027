@@ -2,6 +2,14 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
+
+<style>
+ul {
+	justify-content: center;
+	display: flex;
+}
+</style>
+
 <title>Gestionar las Actividades</title>
 
 <meta charset="UTF-8" />
@@ -9,7 +17,28 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 </head>
 <body>
-	<a href="index" class="btn btn-success" role="button">Inicio</a>
+	
+	<p align="center">
+	<font size="15" color="red">TooPots</font>
+	</p>
+	<button class="navbar-toggler" type="button" data-toggle="collapse"
+		data-target="#navbarNav" aria-controls="navbarNav"
+		aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<ul class="nav nav-pills">
+		<li class="nav-item"><a class="nav-link active" href="/usuario/add">Registrarse</a>
+		</li>
+		<li class="nav-item"><a class="nav-link" href="/login/login">Log in</a></li>
+		<li class="nav-item"><a class="nav-link" href="/administradores/admin">Ventana Administradores</a>
+		<li class="nav-item dropdown"><a class="nav-link dropdown-toggle"
+			data-toggle="dropdown" href="/sobre/sobreNosotros" role="button" aria-haspopup="true"
+			aria-expanded="false">SobreNosotros</a>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="/sobre/contacta">Contactanos</a> 
+			</div></li>
+	</ul>
+	
 	<div class="container">
 		<h1>Lista de las Actividades</h1>
 		<table class="table table-striped">
