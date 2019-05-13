@@ -23,7 +23,7 @@ ul {
 	<ul class="nav nav-pills">
 		<li class="nav-item"><a class="nav-link active"
 			href="/usuario/add">Registrarse</a></li>
-		<li class="nav-item"><a class="nav-link" href="/login/login">Log
+		<li class="nav-item"><a class="nav-link" href="/login">Log
 				in</a></li>
 		<li class="nav-item"><a class="nav-link"
 			href="/administradores/admin">Ventana Administradores</a>
@@ -39,8 +39,7 @@ ul {
 	<br></br>
 
 	<ul>
-	<form action="#" th:action="@{/login/login}" th:object="${usuario}"
-			method="POST">
+	<form action="#" th:action="@{/login}" th:object="${usuario}" method="POST">
 			
 		<table>
 				<tr>
