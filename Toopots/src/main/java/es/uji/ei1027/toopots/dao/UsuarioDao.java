@@ -53,16 +53,16 @@ private JdbcTemplate jdbcTemplate;
 				usuario.getEmailUsuario(), usuario.getContrasenya());
 	}
 	
-	public void updateUsuario(Usuario usuario, String idUusario) {
+	public void updateUsuario(Usuario usuario, String emailUsuario) {
 		this.jdbcTemplate.update(""
-				+ " update usuarios set "
+				+ " update usuario set "
 				+ " identificador = ?, "
 				+ " clave = ? "
 				+ " where identificador = ? " ,
-				usuario.getEmailUsuario(), usuario.getContrasenya(), idUusario);
+				usuario.getEmailUsuario(), usuario.getContrasenya(), emailUsuario);
 	}
 	
 	public void deleteUsuario(String usuario) {
-		this.jdbcTemplate.update("delete from usuarios where identificador = ?", usuario);
+		this.jdbcTemplate.update("delete from usuario where identificador = ?", usuario);
 	}
 }
