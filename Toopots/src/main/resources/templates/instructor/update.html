@@ -15,37 +15,38 @@ ul {
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 </head>
 <body>
+	<div layout:fragment="content">
+		<br></br>
 
-	<br></br>
-
-	<h2>Modificar un instructor</h2>
-	<form action="#"
-		th:action="@{/instructor/update/{idInstructor}(idInstructor=${instructor.idInstructor})}"
-		th:object="${instructor}" method="post">
-		<div class="form-row">
-			<div class="form-group col-md-6">
-				<label for="inputEmail">Email</label> <input type="email"
-					class="form-control" id="inputEmail" placeholder="Email">
+		<h2>Modificar un instructor</h2>
+		<form action="#"
+			th:action="@{/instructor/update/{idInstructor}(idInstructor=${instructor.idInstructor})}"
+			th:object="${instructor}" method="post">
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<label for="inputEmail">Email</label> <input type="email"
+						class="form-control" id="inputEmail" placeholder="Email">
+				</div>
+				<div class="form-group col-md-6">
+					<label for="inputEstado">Estado</label> <input type="text"
+						class="form-control" id="inputEstado"
+						placeholder="Activo,Baja temporal,Baja definitiva...">
+				</div>
 			</div>
-			<div class="form-group col-md-6">
-				<label for="inputEstado">Estado</label> <input type="text"
-					class="form-control" id="inputEstado"
-					placeholder="Activo,Baja temporal,Baja definitiva...">
+
+			<div class="form-group">
+				<label for="inputDireccion">Direccion</label> <input type="text"
+					class="form-control" id="inputDireccion"
+					placeholder="Calle,numero,apartamento...">
 			</div>
-		</div>
+			<div class="form-group">
+				<label for="inputIBAN">IBAN</label> <input type="text"
+					class="form-control" id="inputIBAN" placeholder="IBAN">
+			</div>
 
-		<div class="form-group">
-			<label for="inputDireccion">Direccion</label> <input type="text"
-				class="form-control" id="inputDireccion"
-				placeholder="Calle,numero,apartamento...">
-		</div>
-		<div class="form-group">
-			<label for="inputIBAN">IBAN</label> <input type="text"
-				class="form-control" id="inputIBAN" placeholder="IBAN">
-		</div>
-
-		<button type="submit" class="btn btn-primary">Modificar
-			instructor</button>
-	</form>
+			<button type="submit" class="btn btn-primary">Modificar
+				instructor</button>
+		</form>
+	</div>
 </body>
 </html>
