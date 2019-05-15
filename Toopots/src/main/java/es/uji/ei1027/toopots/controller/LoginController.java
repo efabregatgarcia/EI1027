@@ -30,7 +30,7 @@ public class LoginController {
 	@RequestMapping("/")
 	public String login (Model model, HttpSession session) {
 		model.addAttribute("usuario", new Usuario());
-		return "login.html";
+		return "/login/login.html";
 	}
 	
 	@RequestMapping( value="/login", method = RequestMethod.POST)
