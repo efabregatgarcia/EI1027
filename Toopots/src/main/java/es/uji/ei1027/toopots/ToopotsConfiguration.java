@@ -36,6 +36,11 @@ public class ToopotsConfiguration {
         return DataSourceBuilder.create().build();
     }
     
+    @Bean
+	public LayoutDialect layoutDialect() {
+		return new LayoutDialect();
+	}
+    
  
  
 
