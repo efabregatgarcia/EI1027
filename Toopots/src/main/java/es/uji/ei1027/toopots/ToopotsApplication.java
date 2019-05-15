@@ -11,6 +11,7 @@ public class ToopotsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ToopotsApplication.class, args);
+		System.out.println("Funciona");
 	}
 	
 
