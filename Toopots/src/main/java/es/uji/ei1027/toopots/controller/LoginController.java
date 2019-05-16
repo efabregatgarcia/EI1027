@@ -17,7 +17,7 @@ import es.uji.ei1027.toopots.validator.UsuarioValidator;
 
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/login")
 
 
 public class LoginController {
