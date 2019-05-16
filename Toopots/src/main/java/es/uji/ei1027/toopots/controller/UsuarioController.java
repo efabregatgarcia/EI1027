@@ -71,5 +71,7 @@ public class UsuarioController {
 		usuarioDao.deleteUsuario(usuario);
 		return "redirect:../list"; 
 	} 
+	
+	
 }
 

@@ -27,7 +27,7 @@ public class LoginController {
 	private UsuarioDao usuarioDao;
 	
 	
-	@RequestMapping("/")
+	@RequestMapping("/login")
 	public String login (Model model, HttpSession session) {
 		model.addAttribute("usuario", new Usuario());
 		return "/login/login.html";
