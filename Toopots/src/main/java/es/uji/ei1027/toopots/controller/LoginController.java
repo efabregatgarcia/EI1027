@@ -22,7 +22,7 @@ import es.uji.ei1027.toopots.validator.UsuarioValidator;
 
 public class LoginController {
 	
-	@Autowired(required=false)
+	@Autowired(required=true)
 	//@Qualifier("UsuarioDao")
 	private UsuarioDao usuarioDao;
 	
