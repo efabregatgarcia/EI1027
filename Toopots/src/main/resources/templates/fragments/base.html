@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
-	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	>
+	
 <head>
 
 <style>
@@ -35,29 +37,14 @@ ul {
 			aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a class="nav-link active"
-				href="/usuario/add">Registrarse</a></li>
-			<li class="nav-item"><a class="nav-link" href="/actividad/list">Actividades</a></li>
-			<li class="nav-item"><a class="nav-link" href="/login">Log
-					in</a></li>
-			<li class="nav-item"><a class="nav-link"
-				href="/administradores/admin">Ventana Administradores</a>
-			<li class="nav-item dropdown"><a
-				class="nav-link dropdown-toggle" data-toggle="dropdown"
-				href="/sobre/sobreNosotros" role="button" aria-haspopup="true"
-				aria-expanded="false">SobreNosotros</a>
-				<div class="dropdown-menu">
-					<a class="dropdown-item" href="/sobre/contacta">Contactanos</a>
-				</div></li>
-		</ul>
 	</header>
 	<div th:replace="fragments/nav"></div>
-	<div th:replace="fragments/logininfo"></div>
 	<div layout:fragment="content"></div>
 	<footer>
-		<h1>Llista d'usuaris del sistema</h1>
-		<div th:replace="fragments/logininfo">...</div>
+		<hr>
+		<div th:replace="fragments/logininfo"></div>
+		<p class="text-muted">©FVR 2019</p>>
+		
 	</footer>
 </body>
 </html>

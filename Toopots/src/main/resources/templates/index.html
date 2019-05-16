@@ -3,27 +3,26 @@
      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
      layout:decorate="~{fragments/base}">
 <head>
-<head>
+
 <style>
 ul {
 	justify-content: center;
 	display: flex;
 }
 </style>
+
+<title>EI1027</title>
 <meta charset="UTF-8" />
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 </head>
 <body>
-<div layout:fragment="content">>
-	<br></br>
-
-	<ul>
-	<form action="#" th:action="@{/login}" th:object="${usuario}" method="POST">
-			
-		
-		</form>
-	</ul>
-</div>	
+	<div layout:fragment="content">
+		<ul>
+			<img src="/img/mountain.jpg" width="1050" height="450">
+		</ul>
+	</div>
 </body>
 </html>
+
+
