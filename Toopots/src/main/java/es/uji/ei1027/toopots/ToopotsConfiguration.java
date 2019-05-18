@@ -19,13 +19,6 @@ import javax.sql.DataSource;
 @Configuration
 public class ToopotsConfiguration {
 	
-	
-	
-	@Bean
-	public UsuarioDao usuarioDao() {
-		return new UsuarioDao();
-	}
-	
 
     // Configura l'accés a la base de dades (DataSource)
     // a partir de les propietats a src/main/resources/applications.properties
