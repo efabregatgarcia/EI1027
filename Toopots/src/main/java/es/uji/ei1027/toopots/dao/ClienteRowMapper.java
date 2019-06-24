@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import es.uji.ei1027.toopots.model.Cliente;
+import es.uji.ei1027.toopots.util.Cliente;
 
 public class ClienteRowMapper implements RowMapper<Cliente> {
 

@@ -10,7 +10,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import es.uji.ei1027.toopots.model.Reserva;
+import es.uji.ei1027.toopots.util.Reserva;
 
 @Repository
 public class ReservaDao {

@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import org.springframework.jdbc.core.RowMapper;
 
-import es.uji.ei1027.toopots.model.Reserva;
+import es.uji.ei1027.toopots.util.Reserva;
 
 public class ReservaRowMapper implements RowMapper<Reserva> {
 	public Reserva mapRow(ResultSet rs, int rowNum) throws SQLException {

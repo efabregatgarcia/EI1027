@@ -6,7 +6,8 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 import org.springframework.jdbc.core.RowMapper;
-import es.uji.ei1027.toopots.model.Actividad;
+
+import es.uji.ei1027.toopots.util.Actividad;
 
 public class ActividadRowMapper implements RowMapper<Actividad> {
 	public Actividad mapRow(ResultSet rs, int rowNum) throws SQLException {

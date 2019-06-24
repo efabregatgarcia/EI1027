@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import es.uji.ei1027.toopots.model.Instructor;
+import es.uji.ei1027.toopots.util.Instructor;
 
 public class InstructorRowMapper implements RowMapper<Instructor> {
 	public Instructor mapRow(ResultSet rs, int rowNum) throws SQLException {
