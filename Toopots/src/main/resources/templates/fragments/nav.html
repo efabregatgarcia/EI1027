@@ -1,10 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<div class="navbar-collapse collapse">
-		
+
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item"><a class="nav-link active"
 				href="/usuario/add">Registrarse</a></li>
-			<li class="nav-item"><a class="nav-link" href="/actividad/list">Actividades</a></li>
+			<li class="nav-item"><a class="nav-link"
+				href="/actividad/listUsuario">Actividades</a></li>
 			<li class="nav-item"><a class="nav-link" href="/login/login">Log
 					in</a></li>
 			<li class="nav-item"><a class="nav-link"
@@ -16,6 +17,15 @@
 				<div class="dropdown-menu">
 					<a class="dropdown-item" href="/sobre/contacta">Contactanos</a>
 				</div></li>
+			<div class="loggeduser" th:object="${session}">
+				<p th:if="*{emailUsuario == null}">
+					No autenticat <a href="/login/login" th:href="@{/login/login}">Entrar</a>
+				</p>
+				<p th:unless="*{emailUsuario == null}">
+					Autenticat com <span th:text="*{usario.emailUsuario}"></span> <a
+						href="/logout" th:href="@{/logout}">Eixir</a>
+				</p>
+			</div>
 		</ul>
 	</div>
 </nav>

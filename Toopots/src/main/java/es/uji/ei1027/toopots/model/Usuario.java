@@ -1,6 +1,6 @@
 package es.uji.ei1027.toopots.model;
 
-import es.uji.ei1027.toopots.enumeracion.EnumTipoUsuario.EnumTipoUsuarios;
+import es.uji.ei1027.toopots.domain.EnumTipoUsuario.EnumTipoUsuarios;
 
 public class Usuario {
 	String emailUsuario;

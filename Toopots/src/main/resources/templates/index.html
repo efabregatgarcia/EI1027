@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-     layout:decorate="~{fragments/base}">
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{fragments/base}">
 <head>
 
 <style>
@@ -17,10 +17,22 @@ ul {
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
 </head>
 <body>
+
 	<div layout:fragment="content">
-		<ul>
-			<img src="/img/mountain.jpg" width="1050" height="450">
-		</ul>
+	 <!-- Meter lo del dentro del row en un bucle. -->
+		<div class="row">
+			<div class="col-md-3">
+				<div class="card" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Card title</h5>
+						<p class="card-text">Some quick example text to build on the
+							card title and make up the bulk of the card's content.</p>
+						<a href="#" class="btn btn-primary">Go somewhere</a>
+					</div>
+				</div>
+			</div>			
+		</div>
 	</div>
 </body>
 </html>

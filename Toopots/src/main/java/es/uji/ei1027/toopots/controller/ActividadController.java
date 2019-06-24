@@ -24,6 +24,12 @@ public class ActividadController {
 		model.addAttribute("actividades", actividadDao.getActividades());
 		return "actividad/list";
 	}
+	
+	@RequestMapping("/listUsuario")
+	public String listActividadesUsuario(Model model) {
+		model.addAttribute("actividades", actividadDao.getActividades());
+		return "actividad/listUsuario";
+	}
 
 	// Operacions: Crear, llistar, actualitzar, esborrar
 

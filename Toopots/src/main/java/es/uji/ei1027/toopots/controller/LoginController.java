@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import es.uji.ei1027.toopots.dao.UsuarioDao;
-import es.uji.ei1027.toopots.enumeracion.EnumTipoUsuario.EnumTipoUsuarios;
+import es.uji.ei1027.toopots.domain.EnumTipoUsuario.EnumTipoUsuarios;
 import es.uji.ei1027.toopots.model.Usuario;
 import es.uji.ei1027.toopots.validator.UsuarioValidator;
 
