@@ -1,0 +1,309 @@
+
+/* GENERALES */
+
+html, body {
+    height:100%;
+}
+
+#bodyContainer {
+	background: url("../img/background.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+div.carousel-inner{
+	box-shadow: 0 0 8px #A6A6A6;
+}
+
+div.btn-group .selected {
+	background: #158F75;
+}
+
+div.carousel-inner > div.item img{
+	width: 100%;
+}
+
+div.carousel-caption h2{
+	background: rgba(0, 0, 0, 0.4);
+	text-shadow: 0 0 4px #000;
+  	-moz-text-shadow: 0 0 4px #000;
+  	-webkit-text-shadow: 0 0 4px #000;
+}
+
+h1 {
+	display: block;
+	padding-left: 6px;
+}
+
+span.subh {
+	font-family: 'Indie Flower', cursive;
+	display: block;
+	padding: 2px;
+	font-size: .5em;
+}
+
+img.logo {
+	margin-top: 15px;
+}
+
+div.menuPrincipal ul li a{
+	text-transform: uppercase;
+}
+
+div.menuPrincipal ul li{
+	border-bottom: 2px solid #FFF;
+	border-top: 2px solid #FFF;
+}
+
+div.menuPrincipal ul li:hover{
+	border-bottom: 2px solid #70BA22;
+}
+
+alert {
+	padding: 10px;
+}
+
+output {
+	margin-left: 10px;
+	margin-right: 5px;
+	float: left;
+}
+
+input[type=range] {
+	float: left;
+	width: 80%;
+	margin-top: 7px;
+}
+
+.form-range-value {
+	line-height: 34px;
+}
+
+footer div {
+	text-align: center;
+}
+
+.reducido {
+	padding: 5px 15px;
+}
+
+div.noticia {
+	margin: 15px;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 0 8px #A6A6A6;
+}
+
+span.titNoticia {
+	font-weight: 700;
+	font-size: 1.4em;
+}
+
+span.subNoticia {
+	font-style: italic;
+}
+
+.size-reduce-85 {
+	font-size: 0.85em;
+}
+
+div.actividad {
+	margin: 15px;
+	background-color: #fff;
+	padding: 20px;
+	box-shadow: 0 0 8px #A6A6A6;
+}
+
+span.dificultad strong{
+	text-transform: uppercase;
+}
+
+span.iniciacion strong {
+	color: green;
+}
+
+span.medio strong {
+	color: blue;
+}
+
+span.experto strong {
+	color: red;
+}
+
+h3.title {
+	font-size: 24px;
+  	font-weight: 600;
+  	margin: 15px 0;
+}
+
+p.descripcion {
+	color: #424242;
+	font-size: 0.9 em;
+}
+
+a.reservar {
+	width: 100%;
+}
+
+/* ESTILOS DE MENSAJES Y ALERTAS*/
+span.error {
+	font-size: 0.8em;
+	color: red;	
+}
+
+span.AdminRowSubtitle{
+	font-size: 0.8em;
+	font-style: italic;
+	font-color: grey;
+	display: block;
+} 
+
+/* Client testimonials */
+.testimonials blockquote {
+  position: relative;
+  background: white;
+  min-height: 120px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  border: 1px solid #ecedf1;
+}
+.testimonials blockquote:before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  margin-left: -10px;
+  border-top: 10px solid #ecedf1;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+.testimonials blockquote:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  margin-left: -9px;
+  border-top: 9px solid white;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+}
+
+.testimonials blockquote img {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border: 1px solid #ecedf1;
+  background: white;
+  bottom: -65px;
+  left: 50%;
+  margin-left: -25px;
+}
+
+blockquote p.clients-words {
+    font-size: 14px;
+    font-style: italic;
+}
+span.clients-name {
+  font-size: 12px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+/* Botones redes sociales */
+.socialButtons {
+	margin: 26px;
+}
+
+.socialButtons a {
+	color: white;
+	filter: alpha(opacity=80);
+	-moz-opacity:0.80;
+	-khtml-opacity: 0.80; 
+	opacity: 0.80;
+}
+
+.socialButtons a:hover {
+    color: white;
+	filter: alpha(opacity=100);
+	-moz-opacity: 1;
+	-khtml-opacity: 1; 
+	opacity: 1;   	
+}
+.socialButtons .btn-facebook {background: #3b5998;}
+.socialButtons .btn-twitter {background: #00aced;}
+.socialButtons .btn-google {background: #c32f10;}
+
+
+
+/* PAGINA DE CONTACTO */
+div.contact-form input, div.contact-form textarea {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    padding: .3em;
+}
+
+div.contact-form textarea {
+    min-height: 140px;
+}
+
+.contact-info {
+    margin-top: 28px;
+    display: block;
+}
+
+.contact-info ul{
+    list-style: none;
+}
+
+.contact-info ul li {
+    line-height: 24px;
+}
+
+#map {
+	 width:100%;
+	 height:312px;
+}
+/* FIN PAGINA DE CONTACTO */
+
+
+
+/**
+ * Profile image component
+ */
+.profile-header-container{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-header-img > img.img-circle {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #73B85A;
+}
+
+
+/**
+ * Ranking component
+ */
+.rank-label-container {
+    margin-top: -19px;
+    /* z-index: 1000; */
+    text-align: center;
+}
+
+.label.label-default.rank-label {
+    background-color: #73B85A;
+    padding: 5px 10px 5px 10px;
+    border-radius: 27px;
+    font-size: .85em;
+}
