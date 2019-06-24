@@ -13,8 +13,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import es.uji.ei1027.NaturAdventure.domain.Empleado;
-import es.uji.ei1027.NaturAdventure.domain.Grupo;
+import es.uji.ei1027.toopots.domain.Empleado;
+import es.uji.ei1027.toopots.domain.Grupo;
 
 @Repository
 public class EmpleadoDao {

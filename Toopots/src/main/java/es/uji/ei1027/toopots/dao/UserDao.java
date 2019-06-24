@@ -1,6 +1,6 @@
 package es.uji.ei1027.toopots.dao;
 
-import es.uji.ei1027.NaturAdventure.domain.UserDetails;
+import es.uji.ei1027.toopots.domain.UserDetails;
 
 public interface UserDao{
 	

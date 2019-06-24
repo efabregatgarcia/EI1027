@@ -5,13 +5,6 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import es.uji.ei1027.toopots.dao.UsuarioDao;
-import es.uji.ei1027.toopots.util.Actividad;
-import es.uji.ei1027.toopots.util.Cliente;
-import es.uji.ei1027.toopots.util.Instructor;
-import es.uji.ei1027.toopots.util.RegistroInstructor;
-import es.uji.ei1027.toopots.util.Reserva;
-import es.uji.ei1027.toopots.util.Usuario;
 import nz.net.ultraq.thymeleaf.LayoutDialect;
 
 import javax.sql.DataSource;

@@ -11,8 +11,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import es.uji.ei1027.NaturAdventure.domain.Hora;
-import es.uji.ei1027.NaturAdventure.domain.HoraInicio;
+import es.uji.ei1027.toopots.domain.Hora;
+import es.uji.ei1027.toopots.domain.HoraInicio;
 
 @Repository
 public class HoraInicioDao {

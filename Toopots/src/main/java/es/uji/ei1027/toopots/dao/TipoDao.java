@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import es.uji.ei1027.NaturAdventure.domain.Tipo;
+import es.uji.ei1027.toopots.domain.Tipo;
 
 @Repository
 public class TipoDao {

@@ -11,8 +11,8 @@ import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import es.uji.ei1027.NaturAdventure.domain.*;
-import es.uji.ei1027.NaturAdventure.dao.*;
+import es.uji.ei1027.toopots.domain.*;
+import es.uji.ei1027.toopots.dao.*;
 
 public class EnviaCorreo {
 

@@ -14,7 +14,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import es.uji.ei1027.NaturAdventure.domain.Cliente;
+import es.uji.ei1027.toopots.domain.Cliente;
 
 @Repository
 public class ClienteDao {
